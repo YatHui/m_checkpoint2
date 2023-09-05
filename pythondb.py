@@ -21,6 +21,6 @@ def read_dict():
     return rows
 
 while True: ## REPL - Read Execute Program Loop
-    cmd = input("Command: ")
+    cmd = input("Command: list, add, delele or quit ")
     if cmd == "quit":
         exit()
