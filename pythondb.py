@@ -1,5 +1,6 @@
 import psycopg2
 
+
 def db_connection():
  conn = psycopg2.connect(
     host="localhost",
@@ -10,11 +11,10 @@ def db_connection():
  return conn
 
 
-
 def read_dict():
     dbconn = db_connection()
     cur = dbconn.cursor()
-    cur.execute("SELECT id, word, translation FROM dictionary;")
+    cur.execute("SELECT word, translation FROM dictionary;")
     rows = cur.fetchall()
     cur.close()
     dbconn.close()

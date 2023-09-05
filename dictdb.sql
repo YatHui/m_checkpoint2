@@ -20,3 +20,8 @@ CREATE TABLE dictionary (
 	id SERIAL PRIMARY KEY,
 	word VARCHAR (50) NOT NULL UNIQUE,
 	translation VARCHAR (50));
+	
+	
+INSERT INTO dictionary (word, translation) VALUES
+	('hello', 'hej'),
+	('goodbye', 'hejdå');
