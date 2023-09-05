@@ -24,3 +24,6 @@ while True: ## REPL - Read Execute Program Loop
     cmd = input("Command: list, add, delele or quit ")
     if cmd == "quit":
         exit()
+
+def list():
+   print ("SELECT word, translation FROM dictionary;")
