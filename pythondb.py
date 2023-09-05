@@ -1,7 +1,14 @@
 import psycopg2
 
 def db_connection():
-    return psycopg2.connect(host="localhost")
+ conn = psycopg2.connect(
+    host="localhost",
+    port="5432",
+    database="dictdb",
+    user="checkpoint",
+    password="mastery") 
+ return conn
+
 
 
 def read_dict():
