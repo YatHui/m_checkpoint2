@@ -27,3 +27,22 @@ while True: ## REPL - Read Execute Program Loop
 
 def list():
    print ("SELECT word, translation FROM dictionary;")
+
+def add(word, translation):
+   conn = get_db_connection()
+   cur = conn.cursor()
+   cur.execute(f"INSERT INTO dictionary VALUES ('(word)', '(translation)';")
+   cur.execute ("COMMIT")
+   cur.close()
+   conn.close()
+   return 
+
+
+def deleted_word(word, translation):
+   conn = get_db_connection()
+   cur = conn.cursor()
+   cur.execute(f"DROP FROM dictionary VALUES ('(word)';")
+   cur.execute ("COMMIT")
+   cur.close()
+   conn.close()
+   return 
